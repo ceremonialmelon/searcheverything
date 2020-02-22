@@ -1,0 +1,29 @@
+# sample config by melon
+# this config is written in groups of 3 lines with space seperated values on each line
+# FORMATTING IS VERY IMPORTANT
+# any unwanted lines must start with # because the script expects 3 lines at a time as it loops through this file
+# line 1 is the depth integer and the directory to search ( depth 0 is fully recursive)
+# line 2 in the terms included in the search (grep)
+# line 3 is terms to be excluded in the search (grep)
+# leave line2 or line3 blank if you have no terms to include or exclude respectively
+#
+# searching only the user's home directory itself (depth 1) including rc like .bashrc and .X like .Xresources
+# excludes .Xauthority as its only a token and won't need user editting or viewing
+1 $HOME
+rc .X
+.Xauthority
+#
+# user's config folder often loaded with files the user will not edit so here it's useful to exclude quite a bit
+0 $HOME/.config
+
+lx Code mimeapps dconf user-dirs chromium htop pulse appgrid menus vlc gtk-3 BraveSoftware bookmarks eDEX
+#
+# usually the only file being edited in the ~/.ssh folder is the config file
+1 $HOME/.ssh
+conf
+
+#
+# /etc hosts file a very useful file to edit especially if you have a lot of IP addresses you need to remember
+1 /etc
+hosts
+.allow .deny
