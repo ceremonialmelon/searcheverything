@@ -7,7 +7,7 @@
 # also ensure fzf(fuzzy finder) is in the path environment variable
 
 # configure editor $com and configuration file $conffiles
-com="vim"; conffiles="$MC/se/conf"
+com="vim"; conffiles="$HOME/path/to/config"
 
 # function to check user permissions of the selected file and then call your selected editor $com
 # if owner of file doesn't match user calling this script it will call the editor with sudo
